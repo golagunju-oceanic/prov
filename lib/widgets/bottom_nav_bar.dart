@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:prov/core/colors.dart';
 import 'package:prov/pages/cart.dart';
@@ -16,7 +15,7 @@ class CustomBottomNav extends StatefulWidget {
 
 class _CustomBottomNavState extends State<CustomBottomNav> {
   List screen = [Shop(), CartPage(), HomePage(), Catergory(), Profile()];
-  int currentIndex = 0;
+  int currentIndex = 2;
   @override
   Widget build(BuildContext context) {
     MyColors color = MyColors();
