@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:prov/core/colors.dart';
+// import 'package:prov/core/colors.dart';
 import 'package:prov/widgets/categories.dart';
 import 'package:prov/widgets/custom_app_bar.dart';
 import 'package:prov/widgets/image_slider.dart';
+import 'package:prov/widgets/product_grid.dart';
+// import 'package:prov/widgets/product_grid.dart';
 import 'package:prov/widgets/search_bar.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,24 +20,48 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            children: [
-              CustomAppBar(),
-              SizedBox(height: 20),
-              CustomSearchBar(),
-              SizedBox(height: 20),
-              ImageSlider(
-                currentSlide: currentIndex,
-                onchange: (value) {
-                  setState(() {
-                    currentIndex = value;
-                  });
-                },
-              ), SizedBox(height: 20),
-              Categories()
-            ],
+        child: Expanded(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              children: [
+                CustomAppBar(),
+                SizedBox(height: 20),
+                CustomSearchBar(),
+                SizedBox(height: 20),
+                ImageSlider(
+                  currentSlide: currentIndex,
+                  onchange: (value) {
+                    setState(() {
+                      currentIndex = value;
+                    });
+                  },
+                ),
+                SizedBox(height: 20),
+                Categories(),
+                Row(
+                  children: [
+                    Text(
+                      'New Arrivals',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Spacer(),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'See all',
+                        style: TextStyle(color: Colors.grey),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                ProductGrid(),
+              ],
+            ),
           ),
         ),
       ),

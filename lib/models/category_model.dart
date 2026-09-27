@@ -6,12 +6,18 @@ class CategoryModel {
 }
 
 List<CategoryModel> _categories = [
-  CategoryModel(title: "Baby wears", imagePath: 'images/baby wears.jpg'),
-  CategoryModel(title: "Female wears", imagePath: 'images/female wears.jpeg'),
-  CategoryModel(title: "Male wears", imagePath: 'images/male wears.jpeg'),
-  CategoryModel(title: "Jewelry", imagePath: 'images/jewelry.jpg'),
-  CategoryModel(title: "Scents", imagePath: 'images/scents.jpeg'),
-  CategoryModel(title: "Shoes", imagePath: 'images/shoes.jpg'),
+  CategoryModel(title: "Baby wears", imagePath: 'assets/images/baby_wears.jpg'),
+  CategoryModel(
+    title: "Female wears",
+    imagePath: 'assets/images/female_wears.jpeg',
+  ),
+  CategoryModel(
+    title: "Male wears",
+    imagePath: 'assets/images/male_wears.jpeg',
+  ),
+  CategoryModel(title: "Jewelry", imagePath: 'assets/images/jewelry.jpg'),
+  CategoryModel(title: "Scents", imagePath: 'assets/images/scents.jpeg'),
+  CategoryModel(title: "Shoes", imagePath: 'assets/images/shoes.jpg'),
 ];
 
 List<CategoryModel> get categories => _categories;

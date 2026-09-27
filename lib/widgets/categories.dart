@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prov/models/category_model.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Categories extends StatelessWidget {
   const Categories({super.key});
@@ -7,23 +8,22 @@ class Categories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 120,
+      height: 110,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
+          final category = categories[index];
           return Column(
             children: [
               Container(
-                width: 60,
-                height: 60,
+                width: 80,
+                height: 80,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  image: DecorationImage(
-                    image: AssetImage(categories[index].imagePath),
-                  ),
+                  image: DecorationImage(image: AssetImage(category.imagePath)),
                 ),
               ),
-              Text(categories[index].title),
+              Text(category.title, style: GoogleFonts.agbalumo(fontSize: 18)),
             ],
           );
         },
