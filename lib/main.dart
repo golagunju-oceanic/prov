@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:prov/provider/value_provider.dart';
 import 'package:prov/widgets/bottom_nav_bar.dart';
+import 'package:prov/widgets/custom_scroll.dart';
 // import 'package:provider/provider.dart';
 
 void main() {
@@ -14,11 +15,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return
     //  MultiProvider(
-      // providers: [ChangeNotifierProvider(create: (_) => ValueProvider())],
-      // child:
-       MaterialApp(
-        home: Scaffold(bottomNavigationBar: CustomBottomNav()),
-      );
+    // providers: [ChangeNotifierProvider(create: (_) => ValueProvider())],
+    // child:
+    MaterialApp(
+      scrollBehavior: MyCustomScrollBehavior(),
+      home: Scaffold(bottomNavigationBar: CustomBottomNav()),
+    );
     // );
   }
 }

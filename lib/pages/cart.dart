@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:prov/models/category_model.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
@@ -6,6 +7,6 @@ class CartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(body: Center(child: Text("Cart")));
-    ;
+    
   }
 }
